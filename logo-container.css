@@ -1,0 +1,22 @@
+.logo-container {
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 100%;          /* Make logo fill the container width */
+  max-width: 300px;     /* Limit max width */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.academy-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  width: 300px;        /* Same max-width as logo */
+  margin-left: auto;
+  margin-right: auto;
+}
