@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Starlight Math Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    header {
+      background: linear-gradient(to right, #1e1e1e, #2a2a2a);
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #FFD700;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section.hero {
+      padding: 4rem 2rem;
+      background: url('https://images.unsplash.com/photo-1555529669-bc27a112ed2e') no-repeat center center/cover;
+      text-align: center;
+    }
+    section.hero h2 {
+      background: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 1rem;
+      border-radius: 12px;
+    }
+    section.subjects {
+      padding: 2rem;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      background-color: #1e1e1e;
+    }
+    .subject {
+      background: #2a2a2a;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1rem;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 10px #FFD70055;
+    }
+    .subject img {
+      width: 80px;
+      height: 80px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Starlight Math Academy</h1>
+    <nav>
+      <a href="login.html">Login</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Inspiring Young Minds in Maths, Science & Physics</h2>
+  </section>
+
+  <section class="subjects">
+    <div class="subject">
+      <img src="https://img.icons8.com/color/96/calculator.png" alt="Math" />
+      <h3>Maths</h3>
+      <p>Problem-solving, Algebra, Geometry and more.</p>
+    </div>
+    <div class="subject">
+      <img src="https://img.icons8.com/color/96/test-tube.png" alt="Science" />
+      <h3>Science</h3>
+      <p>Explore chemistry, biology and scientific thinking.</p>
+    </div>
+    <div class="subject">
+      <img src="https://img.icons8.com/color/96/physics.png" alt="Physics" />
+      <h3>Physics</h3>
+      <p>Discover motion, forces, energy, and electricity.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Starlight Math Academy
+  </footer>
+</body>
+</html>
