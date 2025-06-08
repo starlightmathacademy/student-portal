@@ -1,34 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Contact</title>
+  <meta charset="UTF-8" />
+  <title>Contact - Starlight Math Academy</title>
   <style>
     body {
-      background: #1a1a1a;
-      color: white;
-      font-family: Poppins, sans-serif;
+      background: #121212;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 2rem;
+      background-image: 
+        radial-gradient(circle at 20% 30%, #5a86ff22 1px, transparent 2px),
+        radial-gradient(circle at 70% 70%, #ff5a5a22 1px, transparent 2px);
+      background-size: 50px 50px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #72aaff;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .math-symbol {
+      font-size: 4rem;
+      color: #ff7f50aa;
+      text-align: center;
+      user-select: none;
+      margin-bottom: 1rem;
+    }
+    .contact-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #222;
+      border-radius: 12px;
       padding: 2rem;
+      box-shadow: 0 0 15px #4976ff88;
     }
-    h2 {
-      text-align: center;
-      color: #FFD700;
+    ul.contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    .info {
-      text-align: center;
-      margin-top: 2rem;
+    ul.contact-list li {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
     }
-    .info a {
-      color: #FFD700;
+    ul.contact-list li a {
+      color: #72aaff;
       text-decoration: none;
-      font-weight: bold;
+      margin-left: 0.5rem;
+      transition: color 0.3s ease;
+    }
+    ul.contact-list li a:hover {
+      color: #ff7f50;
+    }
+    .icon {
+      font-size: 1.6rem;
+      width: 28px;
+      text-align: center;
+      user-select: none;
     }
   </style>
 </head>
 <body>
-  <h2>Contact Us</h2>
-  <div class="info">
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/yourwhatsapplink">Click to chat</a></p>
+  <h1>Contact Us</h1>
+  <div class="math-symbol">∑ ∫ π √</div>
+  <div class="contact-container">
+    <ul class="contact-list">
+      <li><span class="icon">📞</span> Mobile: <a href="tel:0786400574">0786400574</a></li>
+      <li><span class="icon">💬</span> WhatsApp: <a href="https://wa.me/+94786400574" target="_blank" rel="noopener">Click to Chat</a></li>
+      <li><span class="icon">📱</span> Telegram: <a href="https://t.me/Minilak" target="_blank" rel="noopener">@yourtelegramusername</a></li>
+      <li><span class="icon">📧</span> Email: <a href="mailto:starlightmathacademy@gmail.com">starlightmathacademy@gmail.com</a></li>
+    </ul>
   </div>
 </body>
 </html>
