@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Student Login</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <h2>Student Login</h2>
-  <p>Log in with your email and password:</p>
+  <p>Please log in using your email and password.</p>
 
   <button onclick="netlifyIdentity.open()">Log In / Sign Up</button>
 
   <script>
     netlifyIdentity.init();
 
-    // On login success
-    netlifyIdentity.on("login", user => {
+    netlifyIdentity.on("login", (user) => {
       if (!user.confirmed_at) {
-        alert("Your email is not confirmed. Please check your inbox and click the confirmation link.");
+        alert("❗ Your email is not confirmed. Please check your email inbox and click the confirmation link.");
         netlifyIdentity.logout();
         return;
       }
 
-      // Redirect to student's personal page
-      const email = user.email.split("@")[0]; // e.g., "alice"
-      window.location.href = `/students/${email}.html`;
-    });
-
-    // Optional: On logout
-    netlifyIdentity.on("logout", () => {
-      console.log("User logged out");
+      // Redirect to the student's personal page based on email
+      const studentName = user.email.split("@")[0]; // e.g., alice → /students/alice.html
+      window.location.href = `/students/${studentName}.html`;
     });
   </script>
 </body>
