@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head><title>Login</title></head>
+<head>
+  <title>Login</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
 <body>
-  <h2>Login</h2>
-  <p>This login is managed by Netlify Identity.</p>
+  <h2>Student Login</h2>
+  <p>Use your email and password to log in.</p>
+
+  <button onclick="netlifyIdentity.open()">Log In / Sign Up</button>
+
+  <script>
+    netlifyIdentity.init();
+
+    netlifyIdentity.on("login", user => {
+      alert("Welcome " + user.email);
+      window.location.href = "/students/" + user.email.split('@')[0] + ".html";
+    });
+  </script>
 </body>
 </html>
