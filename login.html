@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Student Login</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #121212;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #FFD700;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h2>Student Login</h2>
-  <p>Please log in using your email and password.</p>
-
-  <button onclick="netlifyIdentity.open()">Log In / Sign Up</button>
+  <h2>Login to Student Portal</h2>
+  <button onclick="netlifyIdentity.open()">Login / Sign Up</button>
 
   <script>
     netlifyIdentity.init();
 
     netlifyIdentity.on("login", (user) => {
       if (!user.confirmed_at) {
-        alert("❗ Your email is not confirmed. Please check your email inbox and click the confirmation link.");
+        alert("Email not confirmed. Please check your email inbox and click the confirmation link.");
         netlifyIdentity.logout();
         return;
       }
-
-      // Redirect to the student's personal page based on email
-      const studentName = user.email.split("@")[0]; // e.g., alice → /students/alice.html
-      window.location.href = `/students/${studentName}.html`;
+      const name = user.email.split('@')[0];
+      window.location.href = `/students/${name}.html`;
     });
   </script>
 </body>
